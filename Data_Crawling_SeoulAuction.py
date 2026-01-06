@@ -7,13 +7,14 @@ import time
 import pandas as pd
 import datetime
 import streamlit as st
+from selenium.webdriver.chrome.options import Options
 
 # 웹 페이지 제목 설정
 st.title("🏛️ 서울옥션 데이터 수집기")
 st.write("버튼을 누르면 실시간으로 데이터를 수집하여 엑셀로 만들어줍니다.")
 
 # 1. 브라우저 설정
-cchrome_options = Options()
+chrome_options = Options()
 chrome_options.add_argument("--headless") # 화면 없이 실행 (필수)
 chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
